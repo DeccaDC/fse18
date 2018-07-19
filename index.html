@@ -13,8 +13,10 @@
       <h1 class="project-name"><img src="images/1.png" /></h1>
       <h2 class="project-tagline">Artifact for FSE'18 paper "Do the Dependency Conflicts in My Project Matter?"</h2>
       
-        <a href="https://github.com/DeccaDC/Decca" class="btn">View on GitHub</a>
+       <h2><img src="images/3.PNG" /> <img src="images/4.PNG" /></h2>
       
+        <a href="https://github.com/DeccaDC/Decca" class="btn">View on GitHub</a>
+     
       
     </section>
     
@@ -27,7 +29,7 @@
   
     <section class="main-content">
       
-<p>In this paper, we first conducted an empirical study on real-world DC issues collected from large open source projects. We identified three manifestation patterns of the DC issues and four fixing patterns. Then, we designed an automated detection tool for DC issues called Decca based on these findings. Decca also assesses these issues’ severity and filter out the benign ones. Our evaluation results show that Decca achieves a high precision of 0.923 and recall of 0.766 in detecting high-severity DC issues. More importantly, Decca can also detect unknown DC issues of different severity levels. Specifically, we identified 466 DC issues from 24 projects. After filtering out 438 benign ones, we reported 20 DC bugs containing 28 harmful issues. Among them, 10 bugs have been confirmed by developers, and 5 were fixed with our suggested patches. These results demonstrate the usefulness of our empirical study and the proposed tool Decca.</p>
+<p class="pp">In this paper, we first conducted an empirical study on real-world DC issues collected from large open source projects. We identified three manifestation patterns of the DC issues and four fixing patterns. Then, we designed an automated detection tool for DC issues called Decca based on these findings. Decca also assesses these issues’ severity and filter out the benign ones. Our evaluation results show that Decca achieves a high precision of 0.923 and recall of 0.766 in detecting high-severity DC issues. More importantly, Decca can also detect unknown DC issues of different severity levels. Specifically, we identified 466 DC issues from 24 projects. After filtering out 438 benign ones, we reported 20 DC bugs containing 28 harmful issues. Among them, 10 bugs have been confirmed by developers, and 5 were fixed with our suggested patches. These results demonstrate the usefulness of our empirical study and the proposed tool Decca.</p>
 
 <h1 id="installation"><strong>Raw data</strong></h1>
 
@@ -99,7 +101,7 @@ The package RawData.zip contains the following two parts of data:</font>
 <font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat -f=<font style="color:#F00">D:\RawData\Issue report dataset\Projects\hadoop-rel-release-3.0.0\hadoop-common-project\hadoop-minikdc\pom.xml</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Dmaven.test.skip=true neu.lab:decca:1.0:detect -DresultFilePath=D:\Report\resultFile.xml -DdetectClass=true -e –Dappend=false –e
 </p>
 
-<img src="images/2.png" />
+<img src="images/2.png"/>
 <p>Then you can get the dependency issue report in your specified directory (e.g., <code class="highlighter-rouge">D:\Report\resultFile.xml</code>).</p>
 
 
