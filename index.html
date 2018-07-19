@@ -29,17 +29,17 @@
   
     <section class="main-content">
       
-<p class="pp">In this paper, we first conducted an empirical study on real-world DC issues collected from large open source projects. We identified three manifestation patterns of the DC issues and four fixing patterns. Then, we designed an automated detection tool for DC issues called Decca based on these findings. Decca also assesses these issues’ severity and filter out the benign ones. Our evaluation results show that Decca achieves a high precision of 0.923 and recall of 0.766 in detecting high-severity DC issues. More importantly, Decca can also detect unknown DC issues of different severity levels. Specifically, we identified 466 DC issues from 24 projects. After filtering out 438 benign ones, we reported 20 DC bugs containing 28 harmful issues. Among them, 10 bugs have been confirmed by developers, and 5 were fixed with our suggested patches. These results demonstrate the usefulness of our empirical study and the proposed tool Decca.</p>
+<p>In this paper, we first conducted an empirical study on real-world DC issues collected from large open source projects. We identified three manifestation patterns of the DC issues and four fixing patterns. Then, we designed an automated detection tool for DC issues called Decca based on these findings. Decca also assesses these issues’ severity and filter out the benign ones. Our evaluation results show that Decca achieves a high precision of 0.923 and recall of 0.766 in detecting high-severity DC issues. More importantly, Decca can also detect unknown DC issues of different severity levels. Specifically, we identified 466 DC issues from 24 projects. After filtering out 438 benign ones, we reported 20 DC bugs containing 28 harmful issues. Among them, 10 bugs have been confirmed by developers, and 5 were fixed with our suggested patches. These results demonstrate the usefulness of our empirical study and the proposed tool Decca.</p>
 
 <h1 id="installation"><strong>Raw data</strong></h1>
 
-<p><font size="+1">We release the following datasets and tool under the MIT License:</font></p>
+<p>We release the following datasets and tool under the MIT License:</p>
 
 <ul>
 
 
-<li><p><font size="+1">Decca, our dependency issue assessment tool, which is implemented as a Maven plugin to warn developers whether the issues are benign or harmful. You can download it's runnable bytecode, script and raw data via 
-<a href="https://github.com/DeccaDC/RawData">https://github.com/DeccaDC/RawData</a>, which contains the following files and directories:</font></p></li>
+<li><p>Decca, our dependency issue assessment tool, which is implemented as a Maven plugin to warn developers whether the issues are benign or harmful. You can download it's runnable bytecode, script and raw data via 
+<a href="https://github.com/DeccaDC/RawData">https://github.com/DeccaDC/RawData</a>, which contains the following files and directories:</p></li>
 
 
   <p>(1)&nbsp;&nbsp;File <code class="highlighter-rouge">decca-1.0.jar</code> is a copy of Decca‘s implementation for running analysis tasks.</p>
@@ -50,28 +50,33 @@
   
 
 
-<li><p><font size="+1">Raw data we used in our experiments(Section 5). You can find raw datasets in package <code class="highlighter-rouge">RawData.zip</code> which is available at:
+<li><p>Raw data we used in our experiments(Section 5). You can find raw datasets in package <code class="highlighter-rouge">RawData.zip</code> which is available at:
 <code class="highlighter-rouge">https://we.tl/PiShDzvpaF</code><br/>
-The package RawData.zip contains the following two parts of data:</font>
+The package RawData.zip contains the following two parts of data:
 </p></li>
 
 
 <p>(a)&nbsp;&nbsp;The ground truth dataset used to verify the effectiveness of Decca (Section 5.1). You can find it in package <code class="highlighter-rouge">RawData\Ground truth dataset.zip</code>, which contains the following files and directories:</p>
-  
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)&nbsp;&nbsp;File Ground truth dataset.xlsx provides the explanation for the dataset.</p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;&nbsp;The directory <code class="highlighter-rouge">RawData\Release_conflict</code> contains the collected host projects with 43 high-severity and 176 low-severity dependency issues.</p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;&nbsp;The directory <code class="highlighter-rouge">RawData\Release_fixed</code> contains the above host projects whose high- severity dependency issues have been fixed.</p>
-  
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running Decca on <code class="highlighter-rouge">RawData\Release_conflict</code> and <code class="highlighter-rouge">RawData\Release_fixed</code> can reproduce our experimental results described in Section 5.1.</p>
+
+<div class="list">
+<p>(1)File Ground truth dataset.xlsx provides the explanation for the dataset.</p>
+<p>(2)The directory <code class="highlighter-rouge">RawData\Release_conflict</code> contains the collected host projects with 43 high-severity and 176 low-severity dependency issues.</p>
+<p>(3)The directory <code class="highlighter-rouge">RawData\Release_fixed</code> contains the above host projects whose high- severity dependency issues have been fixed.</p>
+<p>Running Decca on <code class="highlighter-rouge">RawData\Release_conflict</code> and <code class="highlighter-rouge">RawData\Release_fixed</code> can reproduce our experimental results described in Section 5.1.</p>
+</div>
   
   
 <p>(b)&nbsp;&nbsp;24 Java projects we analyzed to verify the usefulness of Decca (Section 5.2). In package <code class="highlighter-rouge">RawData\Issue report dataset.zip</code>, you can find the following files and directories:</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)&nbsp;&nbsp;File <code class="highlighter-rouge">Issue report dataset\Reports.docx</code> lists the links of dependency conflict issue reports we submitted to their corresponding bug tracking systems(in Section 5.2).</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;&nbsp;The directory <code class="highlighter-rouge">Issue report dataset\Projects</code> contains the 24 subjects with dependency conflict issues.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)&nbsp;&nbsp;The directory <code class="highlighter-rouge">Issue report dataset\Generated issue reports</code> contains the issue reports generated by Decca.</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running Decca on them can reproduce our experimental results described in Table 3 of Section 5.2.</p>
+
+<div class="list">
+<p>(1)File <code class="highlighter-rouge">Issue report dataset\Reports.docx</code> lists the links of dependency conflict issue reports we submitted to their corresponding bug tracking systems(in Section 5.2).</p>
+<p>(2)The directory <code class="highlighter-rouge">Issue report dataset\Projects</code> contains the 24 subjects with dependency conflict issues.</p>
+<p>(3)The directory <code class="highlighter-rouge">Issue report dataset\Generated issue reports</code> contains the issue reports generated by Decca.</p>
+<p>Running Decca on them can reproduce our experimental results described in Table 3 of Section 5.2.</p>
+</div>
+
 
 </ul>
 
@@ -90,19 +95,27 @@ The package RawData.zip contains the following two parts of data:</font>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─script.jar</p>
 <p style="color:#F00">*Note: To facilitate testing, please keep the unzip directory to be consistent with the above example. It should be noted that the location of data (e.g, D:\plugin-decca) is not hardcoded, it can be replaced with user's actual unzip directory in the install commands.</p>
 <p><strong>Step 2</strong>: Install Decca.</p>
-<p>(a)&nbsp;&nbsp;Execute the following Windows CMD command to install soot:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat install:install-file  -Dfile=<font style="color:#F00">D:\plugin-decca\</font>soot-1.0.jar  -DgroupId=neu.lab  -DartifactId=soot -Dversion=1.0 -Dpackaging=jar
-</p>
-<p>(b)&nbsp;&nbsp;Execute the following Windows CMD command to install Decca:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat install:install-file  -Dfile=<font style="color:#F00">D:\plugin-decca\</font>decca-1.0.jar  -DgroupId=neu.lab  -DartifactId=decca -Dversion=1.0 -Dpackaging=maven-plugin -DpomFile=<font style="color:#F00">D:\plugin-decca\</font>decca-1.0.pom
-</p>
-<p><strong>Step 3</strong>: Detect and assess the dependency conflict issues.</p>
-<p>Execute the following Windows CMD command to analyze the project:<br/>
-<font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat -f=<font style="color:#F00">D:\RawData\Issue report dataset\Projects\hadoop-rel-release-3.0.0\hadoop-common-project\hadoop-minikdc\pom.xml</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Dmaven.test.skip=true neu.lab:decca:1.0:detect -DresultFilePath=D:\Report\resultFile.xml -DdetectClass=true -e –Dappend=false –e
-</p>
+<p>(a)&nbsp;&nbsp;Execute the following Windows CMD command to install soot:</p>
 
-<img src="images/2.png"/>
-<p>Then you can get the dependency issue report in your specified directory (e.g., <code class="highlighter-rouge">D:\Report\resultFile.xml</code>).</p>
+<div class="list1">
+<p><font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat install:install-file  -Dfile=<font style="color:#F00">D:\plugin-decca\</font>soot-1.0.jar  -DgroupId=neu.lab  -DartifactId=soot -Dversion=1.0 -Dpackaging=jar</p>
+</div>
+
+<p>(b)&nbsp;&nbsp;Execute the following Windows CMD command to install Decca:</p>
+
+<div class="list1">
+<p><font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat install:install-file  -Dfile=<font style="color:#F00">D:\plugin-decca\</font>decca-1.0.jar  -DgroupId=neu.lab  -DartifactId=decca -Dversion=1.0 -Dpackaging=maven-plugin -DpomFile=<font style="color:#F00">D:\plugin-decca\</font>decca-1.0.pom</p>
+</div>
+
+<p><strong>Step 3</strong>: Detect and assess the dependency conflict issues.</p>
+<p>Execute the following Windows CMD command to analyze the project:</p>
+
+<div class="cmd">
+<p><font style="color:#F00">D:\plugin-decca\</font>apache-maven-3.2.5\bin\mvn.bat -f=<font style="color:#F00">D:\RawData\Issue report dataset\Projects\hadoop-rel-release-3.0.0\hadoop-common-project\hadoop-minikdc\pom.xml</font>&emsp;&emsp;-Dmaven.test.skip=true neu.lab:decca:1.0:detect -DresultFilePath=D:\Report\resultFile.xml -DdetectClass=true -e –Dappend=false –e</p>
+</div>
+
+<img src="images/2.png" style="size:auto"/>
+<p class="foot">Then you can get the dependency issue report in your specified directory (e.g., <code class="highlighter-rouge">D:\Report\resultFile.xml</code>).</p>
 
 
 
